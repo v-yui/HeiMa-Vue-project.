@@ -8,6 +8,8 @@ import search from "./components/bartab/search.vue";
 import news from "./components/middle/news.vue";
 import newsInfo from "./components/middle/newsInfo.vue";
 
+import photoList from "./components/middle/photoList.vue";
+
 var router = new VueRouter({
     routes: [
         {path: '/', component: home},
@@ -17,6 +19,7 @@ var router = new VueRouter({
         {path: '/search', component: search},
         {path: '/home/news', component: news},
         {path: '/home/newsInfo', component: newsInfo},
+        {path: '/home/photoList', component: photoList},
     ],
     linkActiveClass: 'mui-active' //覆盖路由的默认高亮
 })

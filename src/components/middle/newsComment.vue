@@ -26,7 +26,7 @@
         data() {
             return {
                 commentList: [],
-                newComment: '',//自己发表的新评论
+                newComment: "",//自己发表的新评论
                 pageIndex: 1 //默认展示第一页数据
             }
         },
@@ -53,12 +53,11 @@
                 if(this.newComment.trim().length === 0) {
                     return Toast('评论内容不能为空')
                 }
-                else {
+                //这个post接口貌似有点问题，这个发表评论功能目前不能使用
                     this.$http.post("api/postcomment/" + this.$route.params.id, {
                         // trim()去除字符串的头尾空格
                         content: this.newComment.trim()
                     }).then(function (result) {
-                            console.log('wawawawawaw')
                             console.log(result)
                             if(result.body.status === 0) {//拼接一个最新的评论
                                 Toast('空')
@@ -67,7 +66,6 @@
                                 this.newComment = ""
                             }
                     })
-                }
             }
         },
         props: ["id"]
