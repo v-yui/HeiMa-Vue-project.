@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="space">
         <!--mint-ui 的header-->
         <mt-header fixed title="我是不动顶端"></mt-header>
         <!--中间-->
@@ -16,12 +16,12 @@
                 <span class="mui-icon mui-icon-contact"></span>
                 <span class="mui-tab-label">会员</span>
             </router-link>
-            <router-link class="mui-tab-item1" to="cart">
+            <router-link class="mui-tab-item1" to="/cart">
                 <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
                     <span class="mui-badge">0</span></span>
                 <span class="mui-tab-label">购物车</span>
             </router-link>
-            <router-link class="mui-tab-item1" to="search">
+            <router-link class="mui-tab-item1" to="/search">
                 <span class="mui-icon mui-icon-search"></span>
                 <span class="mui-tab-label">搜索</span>
             </router-link>
@@ -36,10 +36,13 @@
 </script>
 
 <style scoped>
-    .header {
-    padding-top: 40px;
+    .space {
+        padding-top: 40px;
         padding-bottom: 50px;
-}
+    }
+    .mint-header {
+        z-index: 100;
+    }
     .v-enter {
         /*opacity: 0;*/
         transform: translateX(100%);

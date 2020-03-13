@@ -5,7 +5,8 @@
             <span>发表时间：{{newsInfo.add_time | dateFormat}}</span>
             <span>点击：{{newsInfo.click}}次</span>
         </p>
-        <hr><!--正文-->
+        <hr>
+        <!--正文-->
         <div v-html="newsInfo.content"class="content">
         </div>
         <!--评论子组件-->
@@ -20,7 +21,7 @@
         name: "newsInfo",
         data() {
             return {
-                id: this.$route.query.id,
+                id: this.$route.params.id,
                 newsInfo: {}
             }
         },

@@ -19,7 +19,7 @@
                    <div class="mui-media-body">图片</div>
                </router-link></li>
            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-               <router-link to="/home/news">
+               <router-link to="/home/goodslist">
                    <img src="../../images/menu3.png" class="sixImg">
                    <div class="mui-media-body">购买</div>
                </router-link></li>

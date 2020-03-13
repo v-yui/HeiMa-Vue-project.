@@ -53,14 +53,12 @@
                 if(this.newComment.trim().length === 0) {
                     return Toast('评论内容不能为空')
                 }
-                //这个post接口貌似有点问题，这个发表评论功能目前不能使用
                     this.$http.post("api/postcomment/" + this.$route.params.id, {
                         // trim()去除字符串的头尾空格
                         content: this.newComment.trim()
                     }).then(function (result) {
                             console.log(result)
                             if(result.body.status === 0) {//拼接一个最新的评论
-                                Toast('空')
                                 var cmt = {user_name: '匿名用户', add_time: Date.now(), content: this.newComment.trim()}
                                 this.commentList.unshift(cmt)
                                 this.newComment = ""
